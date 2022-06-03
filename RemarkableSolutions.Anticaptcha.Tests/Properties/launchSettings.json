@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "RemarkableSolutions.Anticaptcha.Tests": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ClientKey": "d2dece5be5de728252e38ab69566e607"
+      }
+    }
+  }
+}
