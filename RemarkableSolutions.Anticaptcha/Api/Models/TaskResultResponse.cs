@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using RemarkableSolutions.Anticaptcha.Helpers;
 
-namespace RemarkableSolutions.Anticaptcha.Api.Responses
+namespace RemarkableSolutions.Anticaptcha.Api.Models
 {
     public partial class TaskResultResponse
     {

@@ -1,6 +1,6 @@
 ﻿using RemarkableSolutions.Anticaptcha.Helpers;
 
-namespace RemarkableSolutions.Anticaptcha.Api.Responses
+namespace RemarkableSolutions.Anticaptcha.Api.Models
 {
     public class BalanceResponse
     {

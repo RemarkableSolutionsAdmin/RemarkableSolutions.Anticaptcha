@@ -29,5 +29,27 @@ namespace RemarkableSolutions.Anticaptcha.Tests.Api.Anticaptchas
             Assert.NotNull(anticaptchaTask.TaskInfo);
             Assert.Null(anticaptchaTask.TaskInfo?.ErrorCode);
         }
+        
+        
+        [Fact]
+        public async Task ShouldReturnCorrectCaptchaResult_WhenCallingFactualAnticaptchaSolve()
+        {
+            var anticaptchaTask = new RecaptchaV2EnterpriseProxylessTask
+            {
+                ClientKey = TestHelper.ClientKey,
+                WebsiteUrl = new Uri("https://store.steampowered.com/join"),
+                WebsiteKey = "6LdIFr0ZAAAAAO3vz0O0OQrtAefzdJcWQM2TMYQH"
+            };
+
+            anticaptchaTask.EnterprisePayload.Add("test", "qwerty");
+            anticaptchaTask.EnterprisePayload.Add("secret", "AB_12345");
+
+            var result = anticaptchaTask.SolveCaptcha();
+            Assert.True(result.CaptchaTask.Success);
+            Assert.NotNull(anticaptchaTask.TaskInfo);
+            Assert.Null(anticaptchaTask.TaskInfo?.ErrorCode);
+        }
+
+        
     }
 }

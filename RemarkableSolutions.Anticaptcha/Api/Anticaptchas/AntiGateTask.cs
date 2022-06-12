@@ -1,7 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json.Linq;
 using RemarkableSolutions.Anticaptcha.Api.Base;
-using RemarkableSolutions.Anticaptcha.Api.Responses;
 
 namespace RemarkableSolutions.Anticaptcha.Api.Anticaptchas
 {

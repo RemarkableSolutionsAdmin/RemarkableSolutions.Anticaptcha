@@ -4,7 +4,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using RemarkableSolutions.Anticaptcha.Api.Models;
-using RemarkableSolutions.Anticaptcha.Api.Responses;
 using RemarkableSolutions.Anticaptcha.Common;
 using RemarkableSolutions.Anticaptcha.Helpers;
 
@@ -178,15 +177,19 @@ namespace RemarkableSolutions.Anticaptcha.Api.Base
         public SolutionData SolveCaptcha()
         {
             CreateTask();
-            WaitForTaskResult();
-            return GetTaskSolution();
+            var captchaResult = WaitForTaskResult();
+            var taskSolution = GetTaskSolution();
+            taskSolution.CaptchaTask = captchaResult;
+            return taskSolution;
         }
 
         public async Task<SolutionData> SolveCaptchaAsync()
         {
             await CreateTaskAsync();
-            await WaitForTaskResultAsync();
-            return GetTaskSolution();
+            var captchaResult = await WaitForTaskResultAsync();
+            var taskSolution = GetTaskSolution();
+            taskSolution.CaptchaTask = captchaResult;
+            return taskSolution;
         }
     }
 }

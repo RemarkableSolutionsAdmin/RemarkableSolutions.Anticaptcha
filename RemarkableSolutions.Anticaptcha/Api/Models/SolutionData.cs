@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 
-namespace RemarkableSolutions.Anticaptcha.Api.Responses
+namespace RemarkableSolutions.Anticaptcha.Api.Models
 {
     public class SolutionData
     {
@@ -29,6 +29,8 @@ namespace RemarkableSolutions.Anticaptcha.Api.Responses
         public string CaptchaOutput { get; internal set; }
 
         public string Domain { get; set; }
+        
+        public CaptchaTask CaptchaTask { get; set; }
 
         public bool IsValid()
         {
