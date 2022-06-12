@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>0.0.2-alpha</Version>
+    <Authors>RemarkableSolutions</Authors>
+    <PackageProjectUrl></PackageProjectUrl>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/RemarkableSolutionsAdmin/RemarkableSolutions.Anticaptcha</RepositoryUrl>
+    <PackageTags>RemarkableSolutions AntiCaptcha Captcha</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
